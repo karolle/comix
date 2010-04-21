@@ -1,11 +1,15 @@
 <h1>Editing post</h1>
 
-<% form_for(@post) do |f| %>
+<% form_for(@post, :html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :comics -%>
+    <%= f.file_field :comics -%>
   </p>
   <p>
     <%= f.submit 'Update' %>

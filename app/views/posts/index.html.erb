@@ -5,6 +5,8 @@
     <h2><%= link_to h(post.title), post_path(post) %></h2>
     <p class="subheader"><%= post.created_at.to_s(:db) -%></p>
 
+    <%= post_comics post -%>
+
     <p>
       <%= link_to 'Edit', edit_post_path(post) %>
       <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
