@@ -4,7 +4,6 @@
   <div class="post">
     <h2><%= link_to h(post.title), post_path(post) %></h2>
     <p class="subheader"><%= post.created_at.to_s(:db) -%></p>
-    <p><%=h post.body %></p>
 
     <p>
       <%= link_to 'Edit', edit_post_path(post) %>
