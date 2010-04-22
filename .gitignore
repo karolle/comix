@@ -12,4 +12,6 @@ mkmf.log
 config/application/config.yml
 rerun.txt
 nohup.out
+*.war
+public/uploads
 
