@@ -5,6 +5,7 @@ class ComicsUploader < CarrierWave::Uploader::Base
   # Include RMagick or ImageScience support
   #     include CarrierWave::RMagick
   #     include CarrierWave::ImageScience
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader
   storage :file
@@ -27,6 +28,7 @@ class ComicsUploader < CarrierWave::Uploader::Base
   #     def scale(width, height)
   #       # do something
   #     end
+  process :resize_to_limit => [300, 100_000]
 
   # Create different versions of your uploaded files
   #     version :thumb do
